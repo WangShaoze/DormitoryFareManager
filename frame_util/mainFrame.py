@@ -30,62 +30,65 @@ class AddDateFrame(Frame):
         self.bonus_entry = None
         self.note_entry = None
         self.add_button = None
+        self.config(bg='#FFF5EE')
         self.widget()
 
     def widget(self):
         row, column = 0, 0
-        font = ("黑体", 15)
+        font = ("黑体", 30)
+        BG = "#FFF5EE"
+        BG1 = "white"
 
         # 页面标题
-        Label(self, text="日常事务记录", font=("宋体", 25), width=100).grid(row=row, columnspan=5)
+        Label(self, text="日常事务--添加", font=("宋体", 40), width=60, bg=BG).grid(row=row, columnspan=5)
 
         #  日期
         row += 1
-        date_label = Label(self, text="日期:", font=font)
+        date_label = Label(self, text="日期:", font=font, width=20, height=2, bg=BG)
         date_label.grid(row=row, column=column, sticky=E)
-        date_entry = Entry(self, font=font, width=35)
+        date_entry = Entry(self, font=font, width=35, bg=BG1)
         date_entry.grid(row=row, column=column + 1)
 
         # 分割
         row += 1
-        Label(self, text="", font=("宋体", 25), width=100).grid(row=row, columnspan=5)
+        Label(self, text="", font=("宋体", 25), width=100, bg=BG).grid(row=row, columnspan=5)
 
         # 事务
         row += 1
-        fare_label = Label(self, text="事务:", font=font)
+        fare_label = Label(self, text="事务:", font=font, width=20, height=2, bg=BG)
         fare_label.grid(row=row, column=column, sticky=E)
-        fare_entry = Entry(self, font=font, width=35)
+        fare_entry = Entry(self, font=font, width=35, bg=BG1)
         fare_entry.grid(row=row, column=column + 1)
 
         # 分割
         row += 1
-        Label(self, text="", font=("宋体", 25), width=100).grid(row=row, columnspan=5)
+        Label(self, text="", font=("宋体", 25), width=100, bg=BG).grid(row=row, columnspan=5)
 
         # 事务金额
         row += 1
-        bonus_label = Label(self, text="事务金额:", font=font)
+        bonus_label = Label(self, text="事务金额:", font=font, width=20, height=2, bg=BG)
         bonus_label.grid(row=row, column=column, sticky=E)
-        bonus_entry = Entry(self, font=font, width=35)
+        bonus_entry = Entry(self, font=font, width=35, bg=BG1)
         bonus_entry.grid(row=row, column=column + 1)
 
         # 分割
         row += 1
-        Label(self, text="", font=("宋体", 25), width=100).grid(row=row, columnspan=5)
+        Label(self, text="", font=("宋体", 25), width=100, bg=BG).grid(row=row, columnspan=5)
 
         # 备注
         row += 1
-        note_label = Label(self, text="备注:", font=font)
+        note_label = Label(self, text="备注:", font=font, width=20, height=2, bg=BG)
         note_label.grid(row=row, column=column, sticky=E)
-        note_entry = Entry(self, font=font, width=35)
+        note_entry = Entry(self, font=font, width=35, bg=BG1)
         note_entry.grid(row=row, column=column + 1)
 
         # 分割
         row += 1
-        Label(self, text="", font=("宋体", 25), width=100).grid(row=row, columnspan=5)
+        Label(self, text="", font=("宋体", 25), width=100, bg=BG).grid(row=row, columnspan=5)
 
         #  添加按钮
         row += 1
-        add_button = Button(self, text="添加", width=20, height=2, command=lambda: self.addFunction("e"))
+        add_button = Button(self, text="添加", font=font, width=20, height=2, command=lambda: self.addFunction("e"))
         add_button.grid(row=row, column=column + 2)
 
         def changeToNext(event, next_):
@@ -106,7 +109,6 @@ class AddDateFrame(Frame):
         note_entry.bind("<Return>", self.addFunction)
 
     def addFunction(self, event):
-
         # 创建表对象
         dataDao = DataDao()
         # 获取历史数据
@@ -138,10 +140,73 @@ class AddDateFrame(Frame):
 class UpdateDataFrame(Frame):
     def __init__(self, master, **kwargs):
         super(UpdateDataFrame, self).__init__(master, kwargs)
+        self.config(bg="#FFF5EE")
         self.widget()
 
     def widget(self):
-        Button(self, text="修改").pack()
+        kwargs_button = {"font": ("宋体", 25), "width": 10, "bg": "white"}
+        kwargs_label = {"font": ("宋体", 25), "width": 25, "bg": "#FFF5EE", "anchor": "e"}
+        kwargs_entry = {"font": ("宋体", 25), "width": 30, "bg": "white"}
+        kwargs_other = {"font": ("宋体", 15), "width": 30, "bg": "#FFF5EE"}
+
+        row = 0
+        column = 0
+        Label(self, text="宿舍日常事务--修改", font=("宋体", 40), width=60, bg="#FFF5EE").grid(row=row, columnspan=3)
+
+        # 分割
+        row += 1
+        Label(self, text="", **kwargs_other).grid(row=row, columnspan=3)
+
+        row += 1
+        date_label = Label(self, text="日期:", **kwargs_label)
+        date_label.grid(row=row, column=column)
+        date_entry = Entry(self, **kwargs_entry)
+        date_entry.grid(row=row, column=column + 1)
+
+        # 分割
+        row += 1
+        Label(self, text="", **kwargs_other).grid(row=row, columnspan=3)
+
+        row += 1
+        fare_label = Label(self, text="事务:", **kwargs_label)
+        fare_label.grid(row=row, column=column)
+        fare_entry = Entry(self, **kwargs_entry)
+        fare_entry.grid(row=row, column=column + 1)
+
+        # 分割
+        row += 1
+        Label(self, text="", **kwargs_other).grid(row=row, columnspan=3)
+
+        row += 1
+        bonus_label = Label(self, text="事务金额:", **kwargs_label)
+        bonus_label.grid(row=row, column=column)
+        bonus_entry = Entry(self, **kwargs_entry)
+        bonus_entry.grid(row=row, column=column + 1)
+
+        # 分割
+        row += 1
+        Label(self, text="", **kwargs_other).grid(row=row, columnspan=3)
+
+        row += 1
+        note_label = Label(self, text="备注:", **kwargs_label)
+        note_label.grid(row=row, column=column)
+        note_entry = Entry(self, **kwargs_entry)
+        note_entry.grid(row=row, column=column + 1)
+
+        # 分割
+        row += 1
+        Label(self, text="", **kwargs_other).grid(row=row, columnspan=3)
+
+        # 提示
+        row += 1
+        kwargs_tip = {"font": ("宋体", 15), "width": 90, "bg": "#FFF5EE"}
+        Label(self, text="查询是以日期作为主键查询的，即: 输入你需要查询的那条记录的日期即可点击查询", **kwargs_tip).grid(row=row, columnspan=3)
+
+        row += 1
+        search_button = Button(self, text="查询", **kwargs_button)
+        search_button.grid(row=row, column=column)
+        update_button = Button(self, text="修改", **kwargs_button)
+        update_button.grid(row=row, column=column + 2)
 
 
 class JustLookFrame(Frame):

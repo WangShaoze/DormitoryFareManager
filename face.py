@@ -11,19 +11,6 @@ class Face(Tk):
         super(Face, self).__init__(**kwargs)
         self.setAttributes()
 
-        # 一些必要的 初始化属性
-        # # 创建表的sql 语句
-        # self.create_table_sql = "create table if not exists dormitory_fare(日期 text,事务 text,事务金额 real,余额 real, 备注 text);"
-        # """
-        #  self.create_table_sql 创建表 的过程
-        #     需要的字段类型
-        #     ---- 日期  --- text ---  文本
-        #     ---- 事务 --- text ---  文本
-        #     ---- 事务金额 --- real ---  浮点
-        #     ---- 余额 --- real ---  浮点
-        #     ---- 备注 --- text ---  文本
-        # """
-
         # 初始化一个 Frame() 的对象, 用于后期切换
         self.current_frame = None  # 表示当前在展示的Frame
 

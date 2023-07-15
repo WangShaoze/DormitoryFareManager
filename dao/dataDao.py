@@ -1,15 +1,6 @@
 import sqlite3
 
 
-# conn = sqlite3.connect("dormitoryFareManager.db")
-# cursor = conn.cursor()
-# cursor.execute("select * from  dormitory_fare;")
-# data = cursor.fetchall()
-# for uni in data:
-#     print(uni)
-# conn.commit()
-# conn.close()
-
 class DataDao:
     def __init__(self):
         self.__date = None  # 获取当天的日期
@@ -70,12 +61,11 @@ class DataDao:
         :return: flag  ----> type ----> bool
         """
         flag = True
-        self.__conn = sqlite3.connect(database="dormitoryFareManager.db")
+        self.__conn = sqlite3.connect(database="dao/dormitoryFareManager.db")
         cursor = self.__conn.cursor()
         sql = "insert into dormitory_fare values('{}', '{}', {}, {}, '{}');".format
         try:
             sql = sql(self.getDate(), self.getFair(), self.getBonus(), self.getMoney(), self.getNote())
-            print(sql)
             cursor.execute(sql)
         except Exception as e:
             print(e)
