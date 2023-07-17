@@ -57,7 +57,8 @@ cursor = conn.cursor()
 
 sql = "select * from dormitory_fare;"
 cursor.execute(sql)
-print(cursor.fetchall())
+for uni in cursor.fetchall():
+    print(uni)
 
 # sql = "insert into dormitory_fare values('jiji', 'jiji000', -11.0, 93.5, '0fhjd');"
 # cursor.execute(sql)
