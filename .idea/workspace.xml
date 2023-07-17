@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="371394ac-c3f0-4638-b14b-631c25af4cb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/entry_selector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/createDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/dao/createDB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/dataDao.py" beforeDir="false" afterPath="$PROJECT_DIR$/dao/dataDao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/dormitoryFareManager.db" beforeDir="false" afterPath="$PROJECT_DIR$/dao/dormitoryFareManager.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/dormitoryFareManager.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frame_util/mainFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/frame_util/mainFrame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.mainFrame">
+  <component name="RunManager" selected="Python.face">
     <configuration name="createDB" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DormitoryFareManager" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -154,10 +150,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.mainFrame" />
         <item itemvalue="Python.face" />
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.createDB" />
+        <item itemvalue="Python.mainFrame" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.dataDao" />
       </list>
     </recent_temporary>

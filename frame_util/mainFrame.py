@@ -119,7 +119,7 @@ class AddDateFrame(Frame):
         self.entry_selectors(date_entry, date_entry, options_=[today])
         self.entry_selectors(fare_entry, fare_entry, options_=["交水费", "充宿舍费"])
         self.entry_selectors(bonus_entry, bonus_entry, options_=["-11", "100", "120", "180", "240"])
-        self.entry_selectors(note_entry, note_entry, options_=["小王付钱", "小黄付钱", "小苏付钱", "小平付钱", "小苏付钱", "启航付钱", "全员参与"])
+        self.entry_selectors(note_entry, note_entry, options_=["小王付钱", "小黄付钱", "小苏付钱", "小平付钱", "小高付钱", "启航付钱", "全员参与"])
 
     def addFunction(self, event):
         # 创建表对象
@@ -296,7 +296,7 @@ class UpdateDataFrame(Frame):
         self.entry_selectors(date_entry, date_entry, options_=[today])
         self.entry_selectors(fare_entry, fare_entry, options_=["交水费", "充宿舍费"])
         self.entry_selectors(bonus_entry, bonus_entry, options_=["-11", "100", "120", "180", "240"])
-        self.entry_selectors(note_entry, note_entry, options_=["小王付钱", "小黄付钱", "小苏付钱", "小平付钱", "小苏付钱", "启航付钱", "全员参与"])
+        self.entry_selectors(note_entry, note_entry, options_=["小王付钱", "小黄付钱", "小苏付钱", "小平付钱", "小高付钱", "启航付钱", "全员参与"])
 
     def search(self, event):
         """实现查询出对应日期的记录"""
